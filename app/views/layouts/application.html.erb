@@ -9,6 +9,14 @@
   </head>
 
   <body>
+    <h1 align="center"><%= link_to 'Story & Character Name Generator', root_url %></h1>
+    <p align="center">
+      <%= link_to 'Generate character name', character_name_index_path %> | <%= link_to 'Generate story plot', story_plot_index_path %></p>
+    <hr>
     <%= yield %>
+    <br>
+    <br>
+    <hr>
+    <h6 align="center">2017 &copy; Alexandra Wolfe</h6>
   </body>
 </html>
