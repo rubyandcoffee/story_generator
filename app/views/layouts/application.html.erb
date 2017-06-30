@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>StoryGenerator</title>
+    <title>Story Generator</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,14 +9,8 @@
   </head>
 
   <body>
-    <h1 align="center"><%= link_to 'Story & Character Name Generator', root_url %></h1>
-    <p align="center">
-      <%= link_to 'Generate character name', character_name_index_path %> | <%= link_to 'Generate story plot', story_plot_index_path %></p>
-    <hr>
+    <%= render partial: 'partials/nav' %>
     <%= yield %>
-    <br>
-    <br>
-    <hr>
-    <h6 align="center">2017 &copy; Alexandra Wolfe</h6>
+    <%= render partial: 'partials/footer' %>
   </body>
 </html>
