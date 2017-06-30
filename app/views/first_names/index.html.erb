@@ -13,7 +13,7 @@
   <tbody>
     <% @first_names.each do |first_name| %>
       <tr>
-        <td><%= first_name.string %></td>
+        <td><%= first_name.name %></td>
         <td><%= link_to 'Show', first_name %></td>
         <td><%= link_to 'Edit', edit_first_name_path(first_name) %></td>
         <td><%= link_to 'Destroy', first_name, method: :delete, data: { confirm: 'Are you sure?' } %></td>
