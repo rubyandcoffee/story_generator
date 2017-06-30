@@ -1,13 +1,16 @@
 <div align="center">
 
-  <h1>Story Generator</h1>
+  <div class="panel panel-danger" style="width: 400px">
+    <div class="panel-heading">
+      <h3>Story Plot Generator <i class="glyphicon glyphicon-pencil"></i></h3>
+    </div>
+    <div class="panel-body">
+      <p>A <%= Character.order("RANDOM()").first.name %> is a 
+      <%= Situation.order("RANDOM()").first.name %> in 
+      <%= Place.order("RANDOM()").first.name %>.</p>
+    </div>
+  </div>
 
-  <h3>Refresh the page to generator a new story plot!</h3>
-
-  <p>A <%= Character.order("RANDOM()").first.name %> is a 
-  <%= Situation.order("RANDOM()").first.name %> in 
-  <%= Place.order("RANDOM()").first.name %>.</p>
-
-  <%= link_to 'Randomize!', story_plot_index_path %>
+  <%= link_to 'Randomize!', story_plot_index_path, class: 'btn btn-default' %>
 
 </div>
