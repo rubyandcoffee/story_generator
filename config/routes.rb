@@ -1,3 +1,13 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  get 'character_name/index'
+
+  resources :last_names
+  resources :first_names
+  resources :places
+  resources :situations
+  resources :characters
+
+  root to: 'home#index'
+
 end
