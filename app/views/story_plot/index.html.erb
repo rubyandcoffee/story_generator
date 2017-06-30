@@ -1,0 +1,13 @@
+<div align="center">
+
+  <h1>Story Generator</h1>
+
+  <h3>Refresh the page to generator a new story plot!</h3>
+
+  <p>A <%= Character.order("RANDOM()").first.name %> is a 
+  <%= Situation.order("RANDOM()").first.name %> in 
+  <%= Place.order("RANDOM()").first.name %>.</p>
+
+  <%= link_to 'Randomize!', story_plot_index_path %>
+
+</div>

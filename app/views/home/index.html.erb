@@ -1,16 +1,6 @@
 <div align="center">
-
-  <h1>Story Generator</h1>
-
-  <h3>Refresh the page to generator a new story plot!</h3>
-  <%= link_to 'Generate character name', character_name_index_path %>
-
-  <hr>
-
-  <p>A <%= Character.order("RANDOM()").first.name %> is a 
-  <%= Situation.order("RANDOM()").first.name %> in 
-  <%= Place.order("RANDOM()").first.name %>.</p>
-
-  <%= link_to 'Randomize!', root_url %>
-
+  <h3>Click on either of the following links to generator a random new story or character name!</h3>
+  <br>
+  <%= link_to 'Generate character name', character_name_index_path %><br>
+  <%= link_to 'Generate story plot', story_plot_index_path %>
 </div>

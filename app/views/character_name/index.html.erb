@@ -3,9 +3,6 @@
   <h1>Character Name Generator</h1>
 
   <h3>Refresh the page to generator a new character name!</h3>
-  <%= link_to 'Generate story plot', root_url %>
-
-  <hr>
 
   <p><%= FirstName.order("RANDOM()").first.name %>
   <%= LastName.order("RANDOM()").first.name %></p>
