@@ -1,15 +1,10 @@
 class FirstNamesController < ApplicationController
-  before_action :set_first_name, only: [:show, :edit, :update, :destroy]
+  before_action :set_first_name, only: [:edit, :update, :destroy]
 
   # GET /first_names
   # GET /first_names.json
   def index
     @first_names = FirstName.all
-  end
-
-  # GET /first_names/1
-  # GET /first_names/1.json
-  def show
   end
 
   # GET /first_names/new
@@ -28,8 +23,8 @@ class FirstNamesController < ApplicationController
 
     respond_to do |format|
       if @first_name.save
-        format.html { redirect_to @first_name, notice: 'First name was successfully created.' }
-        format.json { render :show, status: :created, location: @first_name }
+        format.html { redirect_to first_names_url, notice: 'First name was successfully created.' }
+        format.json { render :index, status: :created, location: first_names_url }
       else
         format.html { render :new }
         format.json { render json: @first_name.errors, status: :unprocessable_entity }
@@ -42,8 +37,8 @@ class FirstNamesController < ApplicationController
   def update
     respond_to do |format|
       if @first_name.update(first_name_params)
-        format.html { redirect_to @first_name, notice: 'First name was successfully updated.' }
-        format.json { render :show, status: :ok, location: @first_name }
+        format.html { redirect_to first_names_url, notice: 'First name was successfully updated.' }
+        format.json { render :index, status: :ok, location: first_names_url }
       else
         format.html { render :edit }
         format.json { render json: @first_name.errors, status: :unprocessable_entity }

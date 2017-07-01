@@ -1,15 +1,10 @@
 class SituationsController < ApplicationController
-  before_action :set_situation, only: [:show, :edit, :update, :destroy]
+  before_action :set_situation, only: [:edit, :update, :destroy]
 
   # GET /situations
   # GET /situations.json
   def index
     @situations = Situation.all
-  end
-
-  # GET /situations/1
-  # GET /situations/1.json
-  def show
   end
 
   # GET /situations/new
@@ -28,8 +23,8 @@ class SituationsController < ApplicationController
 
     respond_to do |format|
       if @situation.save
-        format.html { redirect_to @situation, notice: 'Situation was successfully created.' }
-        format.json { render :show, status: :created, location: @situation }
+        format.html { redirect_to situations_url, notice: 'Situation was successfully created.' }
+        format.json { render :index, status: :created, location: situations_url }
       else
         format.html { render :new }
         format.json { render json: @situation.errors, status: :unprocessable_entity }
@@ -42,8 +37,8 @@ class SituationsController < ApplicationController
   def update
     respond_to do |format|
       if @situation.update(situation_params)
-        format.html { redirect_to @situation, notice: 'Situation was successfully updated.' }
-        format.json { render :show, status: :ok, location: @situation }
+        format.html { redirect_to situations_url, notice: 'Situation was successfully updated.' }
+        format.json { render :index, status: :ok, location: situations_url }
       else
         format.html { render :edit }
         format.json { render json: @situation.errors, status: :unprocessable_entity }
