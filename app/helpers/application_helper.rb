@@ -9,4 +9,8 @@ module ApplicationHelper
     end
   end
 
+  def random(object)
+    object.order("RANDOM()").first.name
+  end
+
 end
