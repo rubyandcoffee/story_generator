@@ -3,7 +3,11 @@ en:
     title: Welcome to the Story Generator!
     introduction: Here you can find a random new Story Plot or Character Name.
     coming_soon: "We'll probably be adding some more generators soon, but for now you have an ever-expanding list of Story Plots and Character Names, just waiting to be randomised!"
+    quote: "'The king died and then the queen died,' is a story. 'The king died, and then the queen died of grief,' is a plot. The time sequence is preserved, but the sense of causality overshadows it. Consider the death of the queen: If it is in a story we say 'and then?' If it is in a plot we ask 'why?'"
+    quote_author: E. M. Forster
   story_plot:
     title: Story Plot Generator
+    quote: "Plot-driven stories place a larger emphasis on the actual plot itself. Factors such as plot twists, action and external conflict are what make up the focus of this style of writing. In most cases, the goals of the story are more external in that they are focused on the development of a situation."
   character_name:
     title: Character Name Generator
+    quote: "Character-driven writing focuses on the inner conflict of the characters that you’ve created. If you choose to use this writing style, your reader will spend time thinking about the characters and their attitudes, personal evolutions and decisions, and how those, in turn, change the shape of the plot and the story as a whole."
