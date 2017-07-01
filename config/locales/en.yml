@@ -8,6 +8,8 @@ en:
   story_plot:
     title: Story Plot Generator
     quote: "Plot-driven stories place a larger emphasis on the actual plot itself. Factors such as plot twists, action and external conflict are what make up the focus of this style of writing. In most cases, the goals of the story are more external in that they are focused on the development of a situation."
+    example: Did you know? Romeo and Juliet is a plot-driven story.
   character_name:
     title: Character Name Generator
     quote: "Character-driven writing focuses on the inner conflict of the characters that you’ve created. If you choose to use this writing style, your reader will spend time thinking about the characters and their attitudes, personal evolutions and decisions, and how those, in turn, change the shape of the plot and the story as a whole."
+    example: Did you know? Pride and Prejudice is a character-driven story.
