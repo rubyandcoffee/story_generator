@@ -23,7 +23,7 @@ class PlacesController < ApplicationController
 
     respond_to do |format|
       if @place.save
-        format.html { redirect_to places_url, notice: 'Place was successfully created.' }
+        format.html { redirect_to places_url, notice: "Place '#{@place.name}' was successfully created." }
         format.json { render :index, status: :created, location: places_url }
       else
         format.html { render :new }
@@ -37,7 +37,7 @@ class PlacesController < ApplicationController
   def update
     respond_to do |format|
       if @place.update(place_params)
-        format.html { redirect_to places_url, notice: 'Place was successfully updated.' }
+        format.html { redirect_to places_url, notice: "Place '#{@place.name}' was successfully updated." }
         format.json { render :index, status: :ok, location: @place }
       else
         format.html { render :edit }
@@ -51,7 +51,7 @@ class PlacesController < ApplicationController
   def destroy
     @place.destroy
     respond_to do |format|
-      format.html { redirect_to places_url, notice: 'Place was successfully destroyed.' }
+      format.html { redirect_to places_url, notice: "Place '#{@place.name}' was successfully destroyed." }
       format.json { head :no_content }
     end
   end

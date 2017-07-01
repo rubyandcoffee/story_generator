@@ -23,7 +23,7 @@ class LastNamesController < ApplicationController
 
     respond_to do |format|
       if @last_name.save
-        format.html { redirect_to last_names_url, notice: 'Last name was successfully created.' }
+        format.html { redirect_to last_names_url, notice: "Last name '#{@last_name.name}' was successfully created." }
         format.json { render :index, status: :created, location: last_names_url }
       else
         format.html { render :new }
@@ -37,7 +37,7 @@ class LastNamesController < ApplicationController
   def update
     respond_to do |format|
       if @last_name.update(last_name_params)
-        format.html { redirect_to last_names_url, notice: 'Last name was successfully updated.' }
+        format.html { redirect_to last_names_url, notice: "Last name '#{@last_name.name}' was successfully updated." }
         format.json { render :index, status: :ok, location: last_names_url }
       else
         format.html { render :edit }
@@ -51,7 +51,7 @@ class LastNamesController < ApplicationController
   def destroy
     @last_name.destroy
     respond_to do |format|
-      format.html { redirect_to last_names_url, notice: 'Last name was successfully destroyed.' }
+      format.html { redirect_to last_names_url, notice: "Last name '#{@last_name.name}' was successfully destroyed." }
       format.json { head :no_content }
     end
   end
