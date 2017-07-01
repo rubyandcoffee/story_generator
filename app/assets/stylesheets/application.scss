@@ -16,13 +16,13 @@
 @import "bootstrap";
 
 #footer {
-   position:absolute;
-   left:0px;
-   bottom:0px;
-   height:50px;
-   width:100%;
-   background:#fff;
-   color: #000;
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  height: 50px;
+  width: 100%;
+  background: #fff;
+  color: #000;
 }
 
 .form-group {
