@@ -4,11 +4,11 @@ Rails.application.routes.draw do
 
   get 'character_name/index'
 
-  resources :last_names
-  resources :first_names
-  resources :places
-  resources :situations
-  resources :characters
+  resources :last_names, except: :show
+  resources :first_names, except: :show
+  resources :places, except: :show
+  resources :situations, except: :show
+  resources :characters, except: :show
 
   root to: 'home#index'
 
