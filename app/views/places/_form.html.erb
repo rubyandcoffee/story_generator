@@ -11,17 +11,16 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :name %>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, class: 'form-control', placeholder: 'Bangkok' %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :place_type %>
-    <%= f.text_field :place_type %>
+    <%= f.text_field :place_type, class: 'form-control', placeholder: 'City' %>
   </div>
 
-  <div class="actions">
-    <%= f.submit class: 'btn btn-success' %>
-  </div>
+  <%= f.submit class: 'btn btn-success' %>
+
 <% end %>
