@@ -1,7 +1,7 @@
 <div class="jumbotron" id="name-jumbotron">
   <h1><i class="glyphicon glyphicon-user"></i></h1>
-  <h3>Character Name Generator</h3>
-  <p><%= FirstName.order("RANDOM()").first.name %>
-    <%= LastName.order("RANDOM()").first.name %></p>
+  <h3><%= t('character_name.title') %></h3>
+  <p><%= random(FirstName) %> <%= random(LastName) %></p>
+
   <%= link_to 'Randomize!', character_name_index_path, class: 'btn btn-warning' %>
 </div>

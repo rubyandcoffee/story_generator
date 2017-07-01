@@ -1,9 +1,7 @@
 <div class="jumbotron" id="plot-jumbotron">
   <h1><i class="glyphicon glyphicon-pencil"></i></h1>
-  <h3>Story Plot Generator</h3>
-  <p>A <%= Character.order("RANDOM()").first.name %> is a 
-  <%= Situation.order("RANDOM()").first.name %> in 
-  <%= Place.order("RANDOM()").first.name %>.</p>
+  <h3><%= t('story_plot.title') %></h3>
+  <p>A <%= random(Character) %> is a <%= random(Situation) %> in <%= random(Place) %>.</p>
 
   <%= link_to 'Randomize!', story_plot_index_path, class: 'btn btn-info' %>
 </div>
