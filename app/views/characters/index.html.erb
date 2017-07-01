@@ -1,29 +1,40 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Characters</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1>Characters</h1>
+      <%= link_to 'New Character', new_character_path, class: 'btn btn-success' %>
+    </div>
+  </div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Character type</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+  <div class="row">
+    <div class="col-md-4">
+      <h2>Name</h2>
+    </div>
+    <div class="col-md-4">
+      <h2>Character type</h2>
+    </div>
+    <div class="col-md-4">
+      <h2>Actions</h2>
+    </div>
+  </div>
 
-  <tbody>
-    <% @characters.each do |character| %>
-      <tr>
-        <td><%= character.name %></td>
-        <td><%= character.character_type %></td>
-        <td><%= link_to 'Show', character %></td>
-        <td><%= link_to 'Edit', edit_character_path(character) %></td>
-        <td><%= link_to 'Destroy', character, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+  <% @characters.each do |character| %>
+  <div class="row">
+    <div class="col-md-4">
+      <p><%= character.name %></p>
+    </div>
+    <div class="col-md-4">
+      <p><%= character.character_type %></p>
+    </div>
+    <div class="col-md-4">
+      <div class="btn-group" role="group">
+        <%= link_to 'Edit', edit_character_path(character), type: 'button', class: 'btn btn-info' %>
+        <%= link_to 'Destroy', character, method: :delete, data: { confirm: 'Are you sure?' } , type: 'button', class: 'btn btn-danger' %>
+      </div>
+    </div>
+  </div>
+  <% end %>
 
-<br>
-
-<%= link_to 'New Character', new_character_path %>
+</div>
