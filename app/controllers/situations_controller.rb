@@ -4,7 +4,7 @@ class SituationsController < ApplicationController
   # GET /situations
   # GET /situations.json
   def index
-    @situations = Situation.all
+    @situations = Situation.order('situation_type')
   end
 
   # GET /situations/new

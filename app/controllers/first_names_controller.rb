@@ -4,7 +4,7 @@ class FirstNamesController < ApplicationController
   # GET /first_names
   # GET /first_names.json
   def index
-    @first_names = FirstName.all
+    @first_names = FirstName.order('name')
   end
 
   # GET /first_names/new
